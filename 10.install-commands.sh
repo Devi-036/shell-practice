@@ -11,3 +11,11 @@ else
 fi
 
 dnf list installed mysql
+
+if [ $? -eq 0 ]
+then
+   echo "Installing MySQL is ... SUCCESS"
+else
+   echo "Installing MySQL is ... FAILURE"
+   exit 1
+fi
